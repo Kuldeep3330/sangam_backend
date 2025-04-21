@@ -1,15 +1,15 @@
-// const add=()=>{
-//     return 10+20;
-// }
-// console.log(add());
+const express= require('express')
 
+const app=express()
 
-//module wrapper
-// (
-//     function(exports, require, module, __filename, __dirname){
+app.get('/', (req, res)=>{
+    res.send('hello world')
+})
 
-//     }
-// )
+app.get('/about', (req, res)=>{
+    res.send('this is the about page')
+})
 
-console.log(__filename);
-
+app.listen(3000, ()=>{
+    console.log(`Server running at http://localhost:3000/`);
+})
