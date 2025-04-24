@@ -2,13 +2,33 @@ const express= require('express')
 
 const app=express()
 
-app.get('/', (req, res)=>{
-    res.send('hello world')
-})
+app.use(expree.json())
 
-app.get('/about', (req, res)=>{
-    res.send('this is the about page')
-})
+const book=[
+    { "id": 1, "title": "The Silent Forest", "author": "Emily Stone" },
+    { "id": 2, "title": "Echoes of the Past", "author": "James Monroe" },
+    { "id": 3, "title": "Whispers in the Wind", "author": "Lara Bennett" },
+    { "id": 4, "title": "The Last Horizon", "author": "Noah Carter" },
+    { "id": 5, "title": "Tides of Tomorrow", "author": "Sophia Lin" },
+    { "id": 6, "title": "Shadows of the Mind", "author": "Aiden Brooks" },
+    { "id": 7, "title": "The Crimson Pact", "author": "Zara Knight" },
+    { "id": 8, "title": "Beneath the Ashes", "author": "Leo James" },
+    { "id": 9, "title": "Moonlight Sonata", "author": "Isla Morgan" },
+    { "id": 10, "title": "The Forgotten Code", "author": "Ethan Clarke" }
+  ];
+
+  //get all books
+
+  app.get('/', (req, res)=>{
+    res.json({
+        message:"welcome to our bookstore app"
+    })
+
+  })
+  app.get('/books', (req, res)=>{
+    res.json(book)
+  })
+
 
 app.listen(3000, ()=>{
     console.log(`Server running at http://localhost:3000/`);
