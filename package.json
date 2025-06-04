@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "node 04.rest-api-development/index.js"
+    "start": "node 05.rest-api-developement/index.js"
   },
   "keywords": [
     "sangam",
@@ -16,7 +16,8 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1"
   },
   "devDependencies": {
     "jest": "^29.7.0",
