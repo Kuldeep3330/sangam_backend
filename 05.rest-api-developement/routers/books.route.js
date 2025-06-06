@@ -1,8 +1,7 @@
 const express= require('express')
+const { getAllBooks } = require('../controllers/books.controller.js')
 const router= express.Router()
 
-router.get('/',(req, res)=>{
-    res.send({message:'hello world'})
-})
+router.get('/',getAllBooks)
 
 module.exports= router
